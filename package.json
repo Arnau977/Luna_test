@@ -1,0 +1,28 @@
+{
+  "name": "luna",
+  "version": "1.0.0",
+  "description": "Yes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Arnau977#0577",
+    "Arnau977",
+    "arnau977"
+  ],
+  "author": "Arnau977#0577",
+  "license": "ISC",
+  "dependencies": {
+    "enmap": "^5.2.3",
+    "mysql": "^2.18.1",
+    "node-opus": "^0.3.3"
+  },
+  "devDependencies": {
+    "discord.js": "^11.5.1",
+    "ffmpeg": "0.0.4",
+    "nodemon": "^2.0.2",
+    "sequelize": "^5.21.3",
+    "sqlite3": "^4.1.1"
+  }
+}
