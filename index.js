@@ -27,7 +27,7 @@ const defaultSettings = {
   modRole: "Moderator",
   adminRole: "Administrator",
   welcomeChannel: "welcome",
-  welcomeMessage: welcome_msg[random(0, welcome_msg.length())]
+  welcomeMessage: welcome_msg[random(0, welcome_msg.length)]
 }
 
 // Start Dynamic Commands

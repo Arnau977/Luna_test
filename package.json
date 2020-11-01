@@ -14,6 +14,7 @@
   "author": "Arnau977#0577",
   "license": "ISC",
   "dependencies": {
+    "better-sqlite3": "^7.1.1",
     "enmap": "^5.2.3",
     "mysql": "^2.18.1",
     "node-opus": "^0.3.3"
