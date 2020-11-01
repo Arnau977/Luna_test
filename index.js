@@ -9,6 +9,27 @@ var botUser = new Discord.User(); // Para referirse al propio bot como usuario
 const Filecfg = `./cfg.json`;
 const cfg = require(Filecfg);
 
+var welcome_msg = ["¡Denle tod@s una calurosa bienvenida a {{user}}!", "¡{{user}} se une a la batalla!", "¡Un {{user}} salvaje apareció!"];
+
+
+// Variables por servidor
+const Enmap = require('enmap');
+client.settings = new Enmap({
+  name: "settings",
+  fetchAll: false,
+  autoFetch: true,
+  cloneLevel: 'deep'
+});
+
+const defaultSettings = {
+  prefix: cfg.PREFIX,
+  modLogChannel: "mod-log",
+  modRole: "Moderator",
+  adminRole: "Administrator",
+  welcomeChannel: "welcome",
+  welcomeMessage: welcome_msg[random(0, welcome_msg.length())]
+}
+
 // Start Dynamic Commands
 const fs = require("fs");
 client.commands = new Discord.Collection();
@@ -42,6 +63,13 @@ client.on("guildMemberAdd", function (member) {
   pool.query(NewUserSQL, function (_err, _result) {
     console.log(`\nEl usuario ${member.user.username} se ha unido al servidor.\n`);
   });
+  client.settings.ensure(member.guild.id, defaultSettings);
+  let welcomeMessage = client.settings.get(member.guild.id, "welcomeMessage");
+  welcomeMessage = welcomeMessage.replace("{{user}}", member.user.tag)
+  member.guild.channels
+    .find("name", client.settings.get(member.guild.id, "welcomeChannel"))
+    .send(welcomeMessage)
+    .catch(console.error);
 });
 
 // Cuando alguien se va del servidor
@@ -66,6 +94,7 @@ client.on('guildCreate', async guild => {
 client.on('guildDelete', async guild => {
   try {
     deleteDB(guild.id);
+    client.settings.delete(guild.id);
   } catch (error) {
     autorUser.send("Ha ocurrido un error al eliminar la base de datos asociada al servidor con id: " + guild.id)
   }

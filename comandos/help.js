@@ -12,7 +12,7 @@ module.exports = {
     name: 'help',
     description: "Te manda por Mensaje Privado todos los comandos y una breve descripción.",
     aliases: ['ayuda', 'commands', 'comandos'],
-    usage: '{nombre del comando}',
+    usage: '{nombre del comando} / {nombre del comando} {comando del que quieres saber más}',
     execute(message, args) {
         const data = [];
         const { commands } = message.client;
@@ -44,11 +44,16 @@ module.exports = {
         if (!command) {
             message.reply('ese no es un comando válido');
         } else {
-            data.push(`**Nombre:** ${command.name}`);
-            if (command.aliases) data.push(`**Alias:** ${command.aliases.join(', ')}`);
-            if (command.description) data.push(`**Descripción:** ${command.description}`);
-            if (command.usage) data.push(`**Modo de empleo:** ${cfg.PREFIX}${command.name} ${command.usage}`);
-            message.channel.send(data, { split: true });
+            const help_msg = new Discord.RichEmbed()
+                .setTitle("Ayuda: " + command.name)
+                .setColor(cfg.color)
+                .setTimestamp();
+
+            if (command.aliases) help_msg.addField(`**Alias:**`, command.aliases.join(', '));
+            if (command.description) help_msg.addField(`**Descripción:**`, command.description);
+            if (command.usage) help_msg.addField(`**Modo de empleo:**`, cfg.PREFIX + command.name + ' ' + command.usage);
+            if (command.example) help_msg.addField(`**Ejemplo:**`, cfg.PREFIX + command.name + ' ' + command.example);
+            message.channel.send(help_msg);
         }
 
 
