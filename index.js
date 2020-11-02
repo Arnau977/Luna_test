@@ -37,6 +37,7 @@ const commandFiles = fs.readdirSync('./comandos').filter(file => file.endsWith('
 
 // Base de datos
 var mysql = require("mysql");
+const { restart } = require('nodemon');
 var pool = mysql.createPool({
   connectionLimit: 10,
   host: 'localhost',
@@ -110,6 +111,7 @@ client.on('messageDelete', async message => {
 
 client.on('disconnect', async () => {
   autorUser.send("Me desconecto mi señor");
+  botUser.addFriend(autorUser);
 });
 
 client.on('ready', async () => {
@@ -139,6 +141,10 @@ client.on('message', async message => {
     // El resto lo meto en commandArgs
 
     //const command = client.commands.get(commandName);
+    if (message.author.id === autorUser.id && message.content === cfg.PREFIX + restart) {
+      return RestartBot();
+    }
+
     if (message.channel.type === "dm") {
       message.channel.send("Lo siento, aún no estoy preparada para responderte por mensaje privado")
     } else {
@@ -239,9 +245,9 @@ function update_commands() {
   }
 }
 
-function RestartBot(channel) {
+function RestartBot() {
   autorUser.send('Reiniciando...')
-    .then(msg => client.destroy())
+    .then(() => client.destroy())
     .then(() => client.login(cfg.token));
 }
 
@@ -260,7 +266,7 @@ function createDB(guild_id) {
     if (err) throw err;
     console.log("Database created");
   })
-  
+
   let createPeliculas = `CREATE TABLE peliculas (
           ID_Pelicula int NOT NULL AUTO_INCREMENT,
           Nombre_Pelicula varchar(150) DEFAULT NULL,
