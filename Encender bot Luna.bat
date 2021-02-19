@@ -1,0 +1,1 @@
+pm2 start index.js --name "Luna Discord Bot977" -f --time -o C:\Users\Arnau977\Desktop\Luna\logs\output.log -e C:\Users\Arnau977\Desktop\Luna\logs\error.log
