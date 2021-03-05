@@ -1,14 +1,7 @@
-# Ignore Visual Studio files
-.vscode
-
-# Ignore rubbish
-rubbish
-
-# Ignore node modules
 node_modules
-
-# Ignore cfg file
 cfg.json
-
-# Ignore logs
-logs
+Encender bot Luna.bat
+desktop.ini
+.vscode
+Rubbish
+comandos.txt

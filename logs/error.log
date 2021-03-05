@@ -14556,3 +14556,87 @@
 2021-02-16T02:23:39:     hostname: 'gateway.discord.gg'
 2021-02-16T02:23:39:   }
 2021-02-16T02:23:39: }
+2021-03-05T18:12:35: DiscordAPIError: 401: Unauthorized
+2021-03-05T18:12:35:     at C:\Users\Arnau977\Desktop\Luna\node_modules\discord.js\src\client\rest\RequestHandlers\Sequential.js:85:15
+2021-03-05T18:12:35:     at C:\Users\Arnau977\Desktop\Luna\node_modules\snekfetch\src\index.js:215:21
+2021-03-05T18:12:35:     at runMicrotasks (<anonymous>)
+2021-03-05T18:12:35:     at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+2021-03-05T18:12:35:   path: '/api/v7/channels/688166615052976149/messages',
+2021-03-05T18:12:35:   code: 0,
+2021-03-05T18:12:35:   method: 'POST'
+2021-03-05T18:12:35: }
+2021-03-05T18:12:36: DiscordAPIError: 401: Unauthorized
+2021-03-05T18:12:36:     at C:\Users\Arnau977\Desktop\Luna\node_modules\discord.js\src\client\rest\RequestHandlers\Sequential.js:85:15
+2021-03-05T18:12:36:     at C:\Users\Arnau977\Desktop\Luna\node_modules\snekfetch\src\index.js:215:21
+2021-03-05T18:12:36:     at runMicrotasks (<anonymous>)
+2021-03-05T18:12:36:     at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+2021-03-05T18:12:36:   path: '/api/v7/channels/688166615052976149/messages',
+2021-03-05T18:12:36:   code: 0,
+2021-03-05T18:12:36:   method: 'POST'
+2021-03-05T18:12:36: }
+2021-03-05T18:16:55: TypeError: Cannot read property 'rest' of undefined
+2021-03-05T18:16:55:     at User.send (C:\Users\Arnau977\Desktop\Luna\node_modules\discord.js\src\structures\interfaces\TextBasedChannel.js:180:24)
+2021-03-05T18:16:55:     at Client.<anonymous> (C:\Users\Arnau977\Desktop\Luna\index.js:116:13)
+2021-03-05T18:16:55:     at Client.emit (events.js:327:22)
+2021-03-05T18:16:55:     at WebSocketConnection.onClose (C:\Users\Arnau977\Desktop\Luna\node_modules\discord.js\src\client\websocket\WebSocketConnection.js:400:19)
+2021-03-05T18:16:55:     at WebSocket.onClose (C:\Users\Arnau977\Desktop\Luna\node_modules\ws\lib\event-target.js:124:16)
+2021-03-05T18:16:55:     at WebSocket.emit (events.js:315:20)
+2021-03-05T18:16:55:     at WebSocket.emitClose (C:\Users\Arnau977\Desktop\Luna\node_modules\ws\lib\websocket.js:191:10)
+2021-03-05T18:16:55:     at TLSSocket.socketOnClose (C:\Users\Arnau977\Desktop\Luna\node_modules\ws\lib\websocket.js:850:15)
+2021-03-05T18:16:55:     at TLSSocket.emit (events.js:327:22)
+2021-03-05T18:16:55:     at net.js:670:12
+2021-03-05T18:16:55: Error: Incorrect login details were provided.
+2021-03-05T18:16:55:     at WebSocketConnection.<anonymous> (C:\Users\Arnau977\Desktop\Luna\node_modules\discord.js\src\client\ClientManager.js:48:41)
+2021-03-05T18:16:55:     at Object.onceWrapper (events.js:422:26)
+2021-03-05T18:16:55:     at WebSocketConnection.emit (events.js:315:20)
+2021-03-05T18:16:55:     at WebSocketConnection.onClose (C:\Users\Arnau977\Desktop\Luna\node_modules\discord.js\src\client\websocket\WebSocketConnection.js:390:10)
+2021-03-05T18:16:55:     at WebSocket.onClose (C:\Users\Arnau977\Desktop\Luna\node_modules\ws\lib\event-target.js:124:16)
+2021-03-05T18:16:55:     at WebSocket.emit (events.js:315:20)
+2021-03-05T18:16:55:     at WebSocket.emitClose (C:\Users\Arnau977\Desktop\Luna\node_modules\ws\lib\websocket.js:191:10)
+2021-03-05T18:16:55:     at TLSSocket.socketOnClose (C:\Users\Arnau977\Desktop\Luna\node_modules\ws\lib\websocket.js:850:15)
+2021-03-05T18:16:55:     at TLSSocket.emit (events.js:327:22)
+2021-03-05T18:16:55:     at net.js:670:12
+2021-03-05T18:18:53: TypeError: Cannot read property 'rest' of undefined
+2021-03-05T18:18:53:     at User.send (C:\Users\Arnau977\Desktop\Luna\node_modules\discord.js\src\structures\interfaces\TextBasedChannel.js:180:24)
+2021-03-05T18:18:53:     at Client.<anonymous> (C:\Users\Arnau977\Desktop\Luna\index.js:116:13)
+2021-03-05T18:18:53:     at Client.emit (events.js:327:22)
+2021-03-05T18:18:53:     at WebSocketConnection.onClose (C:\Users\Arnau977\Desktop\Luna\node_modules\discord.js\src\client\websocket\WebSocketConnection.js:400:19)
+2021-03-05T18:18:53:     at WebSocket.onClose (C:\Users\Arnau977\Desktop\Luna\node_modules\ws\lib\event-target.js:124:16)
+2021-03-05T18:18:53:     at WebSocket.emit (events.js:315:20)
+2021-03-05T18:18:53:     at WebSocket.emitClose (C:\Users\Arnau977\Desktop\Luna\node_modules\ws\lib\websocket.js:191:10)
+2021-03-05T18:18:53:     at TLSSocket.socketOnClose (C:\Users\Arnau977\Desktop\Luna\node_modules\ws\lib\websocket.js:850:15)
+2021-03-05T18:18:53:     at TLSSocket.emit (events.js:327:22)
+2021-03-05T18:18:53:     at net.js:670:12
+2021-03-05T18:18:53: Error: Incorrect login details were provided.
+2021-03-05T18:18:53:     at WebSocketConnection.<anonymous> (C:\Users\Arnau977\Desktop\Luna\node_modules\discord.js\src\client\ClientManager.js:48:41)
+2021-03-05T18:18:53:     at Object.onceWrapper (events.js:422:26)
+2021-03-05T18:18:53:     at WebSocketConnection.emit (events.js:315:20)
+2021-03-05T18:18:53:     at WebSocketConnection.onClose (C:\Users\Arnau977\Desktop\Luna\node_modules\discord.js\src\client\websocket\WebSocketConnection.js:390:10)
+2021-03-05T18:18:53:     at WebSocket.onClose (C:\Users\Arnau977\Desktop\Luna\node_modules\ws\lib\event-target.js:124:16)
+2021-03-05T18:18:53:     at WebSocket.emit (events.js:315:20)
+2021-03-05T18:18:53:     at WebSocket.emitClose (C:\Users\Arnau977\Desktop\Luna\node_modules\ws\lib\websocket.js:191:10)
+2021-03-05T18:18:53:     at TLSSocket.socketOnClose (C:\Users\Arnau977\Desktop\Luna\node_modules\ws\lib\websocket.js:850:15)
+2021-03-05T18:18:53:     at TLSSocket.emit (events.js:327:22)
+2021-03-05T18:18:53:     at net.js:670:12
+2021-03-05T18:19:58: TypeError: Cannot read property 'rest' of undefined
+2021-03-05T18:19:58:     at User.send (C:\Users\Arnau977\Desktop\Luna\node_modules\discord.js\src\structures\interfaces\TextBasedChannel.js:180:24)
+2021-03-05T18:19:58:     at Client.<anonymous> (C:\Users\Arnau977\Desktop\Luna\index.js:116:13)
+2021-03-05T18:19:58:     at Client.emit (events.js:327:22)
+2021-03-05T18:19:58:     at WebSocketConnection.onClose (C:\Users\Arnau977\Desktop\Luna\node_modules\discord.js\src\client\websocket\WebSocketConnection.js:400:19)
+2021-03-05T18:19:58:     at WebSocket.onClose (C:\Users\Arnau977\Desktop\Luna\node_modules\ws\lib\event-target.js:124:16)
+2021-03-05T18:19:58:     at WebSocket.emit (events.js:315:20)
+2021-03-05T18:19:58:     at WebSocket.emitClose (C:\Users\Arnau977\Desktop\Luna\node_modules\ws\lib\websocket.js:191:10)
+2021-03-05T18:19:58:     at TLSSocket.socketOnClose (C:\Users\Arnau977\Desktop\Luna\node_modules\ws\lib\websocket.js:850:15)
+2021-03-05T18:19:58:     at TLSSocket.emit (events.js:327:22)
+2021-03-05T18:19:58:     at net.js:670:12
+2021-03-05T18:19:58: Error: Incorrect login details were provided.
+2021-03-05T18:19:58:     at WebSocketConnection.<anonymous> (C:\Users\Arnau977\Desktop\Luna\node_modules\discord.js\src\client\ClientManager.js:48:41)
+2021-03-05T18:19:58:     at Object.onceWrapper (events.js:422:26)
+2021-03-05T18:19:58:     at WebSocketConnection.emit (events.js:315:20)
+2021-03-05T18:19:58:     at WebSocketConnection.onClose (C:\Users\Arnau977\Desktop\Luna\node_modules\discord.js\src\client\websocket\WebSocketConnection.js:390:10)
+2021-03-05T18:19:58:     at WebSocket.onClose (C:\Users\Arnau977\Desktop\Luna\node_modules\ws\lib\event-target.js:124:16)
+2021-03-05T18:19:58:     at WebSocket.emit (events.js:315:20)
+2021-03-05T18:19:58:     at WebSocket.emitClose (C:\Users\Arnau977\Desktop\Luna\node_modules\ws\lib\websocket.js:191:10)
+2021-03-05T18:19:58:     at TLSSocket.socketOnClose (C:\Users\Arnau977\Desktop\Luna\node_modules\ws\lib\websocket.js:850:15)
+2021-03-05T18:19:58:     at TLSSocket.emit (events.js:327:22)
+2021-03-05T18:19:58:     at net.js:670:12
