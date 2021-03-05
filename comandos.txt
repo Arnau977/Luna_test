@@ -1,2 +1,0 @@
-node index.js (iniciar el bot)
-npx nodemon index.js (cada vez que guarde el archivo reinicia el bot)
